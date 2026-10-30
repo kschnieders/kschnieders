@@ -1,3 +1,8 @@
-![langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kschnieders&layout=compact&hide_border=true&theme=transparent)
-![stats](https://github-readme-stats.vercel.app/api?username=kschnieders&hide_border=true&theme=transparent)
+<p align="center">
+  <img src="assets/header.svg" width="100%" alt="kay">
+</p>
 
+<p align="center">
+  <a href="https://github.com/kschnieders/server2pick"><img src="assets/card-server2pick.svg" width="49%" alt="server2pick"></a>
+  <a href="https://github.com/kschnieders/zwijg"><img src="assets/card-zwijg.svg" width="49%" alt="zwijg"></a>
+</p>

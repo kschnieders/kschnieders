@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="240" viewBox="0 0 840 240">
+  <defs>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+    <clipPath id="clip"><rect width="840" height="240" rx="20"/></clipPath>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#ffffff" opacity=".07"/>
+    </pattern>
+  </defs>
+  <style>
+    .sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+    .b1{animation:m1 14s ease-in-out infinite}
+    .b2{animation:m2 18s ease-in-out infinite}
+    .b3{animation:m3 16s ease-in-out infinite}
+    @keyframes m1{0%,100%{transform:translate(0,0)}50%{transform:translate(120px,40px)}}
+    @keyframes m2{0%,100%{transform:translate(0,0)}50%{transform:translate(-140px,-30px)}}
+    @keyframes m3{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-50px)}}
+    .in{opacity:0;animation:in .9s cubic-bezier(.2,.7,.2,1) forwards}
+    .d1{animation-delay:.15s}.d2{animation-delay:.45s}.d3{animation-delay:.75s}
+    @keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .cur{animation:blink 1.1s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+  </style>
+  <g clip-path="url(#clip)">
+    <rect width="840" height="240" fill="#0b0d12"/>
+    <g filter="url(#blur)" opacity=".75">
+      <circle class="b1" cx="180" cy="60" r="110" fill="#3ec7a8"/>
+      <circle class="b2" cx="680" cy="190" r="130" fill="#6d5dfc"/>
+      <circle class="b3" cx="470" cy="20" r="80" fill="#e8a33d" opacity=".55"/>
+    </g>
+    <rect width="840" height="240" fill="url(#grid)"/>
+    <rect x=".5" y=".5" width="839" height="239" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity=".1"/>
+
+    <g class="in d1"><text x="56" y="70" class="mono" font-size="14" fill="#ffffff" fill-opacity=".55">~/kschnieders</text></g>
+    <g class="in d2"><text x="52" y="150" class="sans" font-size="76" font-weight="800" fill="#ffffff" letter-spacing="-3">kay<tspan fill="#3ec7a8">.</tspan></text></g>
+    <g class="in d3">
+      <text x="56" y="192" class="mono" font-size="16" fill="#ffffff" fill-opacity=".8">denkt. schreibt was. löscht es wieder.<tspan fill="#3ec7a8" fill-opacity="1"> ▍<animate attributeName="fill-opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1.1s" repeatCount="indefinite"/></tspan></text>
+    </g>
+  </g>
+</svg>
